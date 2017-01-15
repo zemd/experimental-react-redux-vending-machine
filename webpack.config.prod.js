@@ -14,6 +14,11 @@ const entries = [
 
 // PLUGINS
 const plugins = [
+  new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: JSON.stringify('production')
+    }
+  }),
   new ExtractTextPlugin("app.css"),
   new webpack.NamedModulesPlugin(),
   new webpack.LoaderOptionsPlugin({
