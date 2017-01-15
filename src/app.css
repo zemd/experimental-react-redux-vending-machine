@@ -1,0 +1,72 @@
+@import "../node_modules/normalize.css/normalize.css";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.products {
+  display: flex;
+
+}
+
+.product {
+  width: 100px;
+  height: 100px;
+  border-radius: 3px;
+  border: 1px solid lightgray;
+  margin: 10px;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  opacity: 0.8;
+}
+
+.product.available.selectable {
+  background: linear-gradient(to bottom, rgba(136, 204, 102, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  cursor: pointer;
+}
+
+.product.available.selectable:hover,
+.product.available.selectable.selected {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(136, 204, 102, 1) 100%);
+}
+
+.product.unavailable {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.money-amount-indicator {
+  font-weight: 600;
+}
+
+.product.selectable {
+
+}
+
+.repayments {
+  display: block;
+  width: 200px;
+  color: #fff;
+  padding: 10px;
+}
+
+.takeout-port.full,
+.repayments.full {
+  background: red;
+}
+
+.takeout-port.empty,
+.repayments.empty {
+  background: green;
+}
+
+.takeout-port {
+  width: 200px;
+  padding: 10px;
+  color: #fff;
+}
